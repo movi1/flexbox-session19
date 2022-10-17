@@ -1,11 +1,87 @@
-.flex-container {
-    display: flex;
-    /* background-color: DodgerBlue; */
+/* body {
+  background-color: beige;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+   flex-wrap: wrap;
+   justify-content: center;
+  background-color: #f67312; 
+  padding: 20px;
+}
+div.responsive {
+  border: 1px solid #3a78b0;
+}
+
+.responsive > div {
+  background-color: #3a78b0;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.responsive:hover {
+  border: 5px solid rgb(7, 133, 3);
+}
+
+On screens that are 600px or less, set the background color to olive
+@media screen and (max-width: 480px) {
+  body {
+    background-color: olive;
+    flex-direction: column;
   }
-  
-  .flex-container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
+} */
+
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 32%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  opacity: 0.9;
+}
+
+.gallery-image:hover {
+  opacity: 1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .column {
+    -ms-flex: 33%;
+    flex: 33%;
+    max-width: 100%;
   }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
